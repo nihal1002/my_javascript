@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+    <script>
+        let friends = ['Ameen', 'Pramila', 'Sayali', 'Junaid', 'Harshal'];
+
+        console.log(friends);
+        document.write(friends,"<br>");
+        console.log(friends[3]);
+        document.write(friends[2], "<br>");
+
+        console.log(friends.length); //lenght count starts from 1
+
+
+        // adding new values at the end
+        friends.push('Naresh', 'Vivek', 'Nivedan','Pramila','Nihal')
+        console.log(friends);
+        document.write(friends," push <br>");
+
+        //removing from end
+        friends.pop();
+        friends.pop();
+        friends.pop();
+        document.write(friends," pop <br>");
+
+
+        // add new value at start
+        friends.unshift('prashant', 'adnan', 'kamal', 'amol');
+        document.write(friends, " unshift <br>")
+
+        friends.shift();
+        friends.shift();
+        // friends.shift();
+        //remove element from start
+        document.write(friends," shift <br>");
+        console.log(friends);
+
+        console.log(friends.splice(-5));
+        console.log(friends.splice(2,3));
+        console.log(friends.splice(1,2));
+
+        //to empty an array
+        //friends =[];
+        // friends.length = 0;
+        // console.log(friends);
+
+        
+    </script>
+    
+</body>
+</html>

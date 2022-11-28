@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message"></div>
+    <script>
+        let div = document.getElementById('message');
+        let user = prompt('enter ur username to login');
+        user = user.toLowerCase();
+        try{
+            if (user !== 'nihu' &&  user !== 'nihal'){
+                throw "unknown user";
+            }
+            else{
+                alert("welcome " + user + " u r allowed to login");
+                div.innerHTML = "welcome " + user + " its nice to see u <br>";
+            }
+        }
+        catch(error){
+            if(error == "unknown user"){
+                div.innerHTML = 'unknown user ' + user + "<br>";
+            }
+        }
+        finally{
+            div.innerHTML += "exception handling is done, using try catch and finally (I will always run)";
+        }
+    </script>
+</body>
+</html>

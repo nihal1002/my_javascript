@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        header{
+            margin: 0.2rem auto;
+            width: 90vw;
+            border: 1px solid darkred;
+            background-color: rgb(22, 4, 144);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.1rem 0.5rem;
+            border-radius: 20%;
+        }
+        /* img#imglogo{
+            display: inline-block;
+            width: 3rem;
+            height: 3rem;
+        } */
+        a{
+            color: rgb(203, 33, 3);
+            font-weight: bold;
+            text-decoration: none;
+        }
+         div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            width: 3rem;
+            height: 3rem;
+            border: 3px solid darkblue;
+            background-color: yellow;
+            color: red;
+            border-radius: 50%;
+            font-size: x-large;
+            text-align: center;
+        }
+        ul#navbar-list1{
+            border: 2px solid rebeccapurple;
+            display: flex;
+            width: 40vw;
+            list-style-type: none;
+            justify-content: space-around;
+        }
+        ul#navbar-list1:hover{
+            background-color: rgb(149, 255, 0);
+        }
+        a.nav-link{
+            text-decoration: none;
+        }
+        a.nav-link:hover{
+            background-color: yellow;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#">
+            <!-- <img src="images/N logo.webp" id="imglogo" alt="logo" title="logo"> -->
+            <div>N</div>
+        </a>
+        <nav id="nav1">
+            <ul id="navbar-list1">
+                <li><a href="#" class="nav-link">Home</a></li>
+                <li><a href="#" class="nav-link">Projects</a></li>
+                <li><a href="#" class="nav-link">Contact us</a></li>
+                <li><a href="#" class="nav-link">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+
+    </script>
+</body>
+</html>

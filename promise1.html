@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise 1</title>
+</head>
+<body>
+    
+
+    <script>
+         
+        let icecream = {
+            flavours: ['🍓strawberry', '🥭mango', '🍏green apple', "🍍pineapple", "🥝kiwi", '🍫chocolate'],
+            liquid: ['🥛milk', '🍦cream', '🍀mint'],
+            holder: ['🍦waffle-cone', '🧁cup', '🍢stick'],
+            topping: ['🍭sprinkles', '🍫chocolate', '🍪oreo', '🧇caramel']
+        }
+        
+        // let shop_open = false;
+        let shop_open = true;
+
+        function time(ms){
+            return new Promise((resolve, reject)=>{
+                if(shop_open){
+                    setTimeout(resolve, ms);
+                }
+
+                else{
+                    reject(console.log("shop is closed"));
+
+                }
+            });
+        }
+
+        async function kitchen(){
+            try{
+
+                await time(2000);
+                console.log(`You have selected the ${icecream.flavours[4]} flavour`);
+
+                await time(3000);
+                console.log(`icecream production has started......`);
+
+                await time(3000);
+                console.log(`your ${icecream.flavours[4]} has been chopped`);
+
+                await time(3000);
+                console.log(`machine has started....`);
+
+                await time(3000);
+                console.log(`your icecream is added on ${icecream.holder[0]}...`);
+
+                await time(3000);
+                console.log(`Adding the toppings: ${icecream.topping[1]}....`);
+
+                await time(3000);
+                console.log(`Enjoy Your ${icecream.flavours[4]} ${icecream.holder[0]} icecream `);
+
+            }
+
+            catch(error){
+                console.log('customer left');
+            }
+
+            finally{
+                console.log('day ended');
+                console.log('time to close shop');
+            }
+        }
+
+        kitchen();
+    </script>
+</body>
+</html>

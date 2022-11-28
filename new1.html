@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <button id="btn1">red bg</button>
+        <button id="btn2">blue bg</button>
+    </section>
+    
+    <script>
+        let btn1 = document.getElementById('btn1');
+        let btn2 = document.getElementById('btn2');
+        let section = document.querySelector('section');
+
+        btn1.addEventListener('click',()=>{
+            section.style.backgroundColor="red";
+        })
+        btn2.addEventListener('click',()=>{
+            section.style.backgroundColor="blue";
+        })
+    </script>
+</body>
+</html>

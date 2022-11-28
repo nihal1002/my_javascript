@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let object1 = {
+            firstname: 'Sayali', lastName: 'Sardar',
+            city: ['Mumbai', 'Pune', 'Bangalore'],
+        };
+        // check any element
+        console.log('email' in  object1);
+
+        //too see all keys
+        for ( let key in object1){
+            console.log(key);
+            document.write(key, "<br>");
+
+        }
+
+        // to see key & value
+        for( let key in object1){
+            console.log(key + ':' + object1[key],);
+        }
+        
+
+        
+        let object3 = {
+            name: 'Nihu',
+            stayIn: {
+                city: 'Mumbai',
+                state: 'maharashtra',
+                country:'India'
+            }
+        }
+        console.log(object3);
+        console.log(object3.stayIn.state);
+        console.log(object3.stayIn.city);
+        console.log(object3.stayIn.country);
+
+
+        
+    </script>
+</body>
+</html>

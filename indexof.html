@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        const arr2 = [2, 4, 20, 10, 2, 3];
+
+        // document.write(arr2.indexOf(4),"<br>");
+        // document.write(arr2.indexOf(5),"<br>");
+        // document.write(arr2.indexOf(10),"<br>");
+        // document.write(arr2.lastIndexOf(2),"<br>");
+        // document.write(arr2.includes(4),"<br>");
+        // document.write(arr2.includes(30),"<br>");
+
+        document.write(arr2.some(checkvalues),"<br>");
+        function checkvalues(item){
+            return item >= 20;
+        }
+
+        document.write(arr2.every(checkvalues2),"<br>");
+        function checkvalues2(item){
+            return item >= 4;
+            // return item >= 2;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(125, 41, 41);
+            background-color: rgb(175, 232, 51);
+            
+        }
+        section{
+            width: 100vw;
+            height: 90vh;
+            border: 2px solid darkblue;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(57, 8, 78);
+        }
+        div{
+            height: 25%;
+            width: 30%;
+            border: 5px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        img{
+            height: 97%;
+            width: 97%;
+        }
+    </style>
+</head>
+<body>
+        <h1> Mouse Event</h1>
+        <section id = " section2">
+            <div id = "div"><img id="img1" src="../images/loki.jpg" onclick="onClick()"></div>
+            <div id = "div"><img id="img2" src="../images/loki.jpg" ondblclick="onDoubleClick()"></div>
+            <div id = "div"><img id="img3" src="../images/loki.jpg" oncontextmenu="onContext()"></div>
+            <div id = "div"><img id="img" src="../images/loki.jpg" onmouseover="onMouseOver()"></div>
+            <div id = "div"><img id="img" src="../images/loki.jpg" onmousedown="onMouseDown()"></div>
+            <div id = "div"><img id="img" src="../images/loki.jpg" onmouseup="onMouseUp()"></div>
+            <div id = "div"><img id="img" src="../images/loki.jpg" onmouseout="onMouseOut()"></div>
+        </section>
+    <script>
+        // function onClick(){
+        //     alert("pls dont click on me");
+        // }
+
+        // function onDoubleClick(){
+        //     alert('pls dont double click on me u bish');
+        // }
+
+        // function onContext(){
+        //     alert('pls dont fuckin irritate me bish');
+        // }
+
+        // function onMouseOver(){
+        //     alert('pls dont fuckin irritate me');
+        // }
+
+        // function onMouseDown(){
+        //     alert('go to hell')
+        // }
+
+        let img1  = document.getElementById('img1');
+        let img2  = document.getElementById('img2');
+        let img3  = document.getElementById('img3');
+
+        img1.addEventListener('click',()=>{
+            alert('pls dont click on me')
+        });
+
+        img2.addEventListener('dblclick',()=>{
+            alert('pls dont click on me')
+        });
+
+        img3.addEventListener('mousedown',()=>{
+            alert('pls dont click on me')
+        });
+    </script>
+</body>
+</html>

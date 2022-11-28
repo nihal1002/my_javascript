@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        
+        // let arr1 = ['nihal'];
+        // let arr2 = ['sardar'];
+        // let arr3 = [1, 2];
+
+        // // joing array
+
+        // let multiarr = arr1.concat(arr2);
+        // console.log(multiarr);
+        // document.write(multiarr, "<br>");
+        // multiarr = arr1.concat(arr2,arr3);
+        // console.log(multiarr);
+        // document.write(multiarr, "<br>");
+
+
+        // // //using spread operator
+        // let arr = [...arr1,...arr2,...arr3];
+        // console.log(arr);
+        // document.write(arr, "<br>");
+
+        let friends = [];
+        console.log(friends);
+        //index array
+        friends[0] = 'pramila';
+        friends[1] = 'kartik';
+        friends[2] = 'sayali';
+        friends[3] = 'junaid';
+        friends[4] = 'harshal';
+        console.log(friends);
+        document.write(friends,"<br>");
+        friends[1] = 'Nihal';
+        console.log(friends);
+        document.write(friends,"<br>");
+
+        // /// looping
+
+        // for(i = 0; i < friends.length; i++){
+        //     document.write(friends[i], "<br>");
+        // }
+
+        // const ar = [1, 3, 5, 7, 9];
+        // for(value of ar){
+        //     document.write(value, "<br>")
+        // }
+        // let marray = [
+        //     ['mango', 'apple', 'pineapple',],
+        //     ['cucumber', 'tomato', 'potato', 'onion']
+
+        // ]
+
+        // console.log(marray[0]);
+        // console.log(marray[0][2]);
+        // console.log(marray[1][2]);
+        // console.log(marray[1]);
+
+        // // for(value of marray){
+
+        // //     document.write(value,'<br>')
+        // // }
+
+        // for(i=0; i<marray.length; i++){
+        //     for(j=0; j<marray[i].length; j++){
+        //         document.write(marray[i][j]," ");
+        //     }
+        //     document.write("<br>");
+        // }
+
+
+        let arr = [2, 6, 1, 4, 3, 5];
+        console.log(arr);
+        console.log(arr.sort());
+        // console.log(arr);
+        console.log(arr.reverse());
+        // console.log(arr);
+
+        arr.forEach((x) => {
+            document.write(x);
+            console.log(x);
+        });
+
+        document.write("<br>");
+
+        arr.forEach(function(x){
+            document.write(x, " ");
+            console.log(x, " ");
+        });
+        document.write("<br>");
+
+        arr.forEach(function arr1(x){
+            document.write(x, " ")
+        });
+
+        
+
+    </script>
+</body>
+</html>

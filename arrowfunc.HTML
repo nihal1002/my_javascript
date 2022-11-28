@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+
+
+        function sum(){
+            return 2+3;
+        }
+        document.write(sum(),'<br>');
+        document.write(sum(),'<br>');
+        document.write(sum(),'<br>');
+
+
+        function sum1(a,b){
+            return a+b;   
+        }
+        document.write(sum1(1,2),'<br>');
+        document.write(sum1(3,4),'<br>');
+        document.write(sum1(6,5),'<br>');
+
+
+        let div = document.querySelector('div');
+        div.addEventListener('click', function(){
+            div.innerHTML = "<h1> hey you just clicked on me</h1>"
+        });
+
+        //arrow funtion 
+
+        let callme = ()=> {document.write("yess <br>")}
+
+        callme();
+
+        // let callme2 = (a,b)=>{
+        //     document.write(a+b,"<br>");
+        //     return a+b;
+        // }
+    </script>
+</body>
+</html>

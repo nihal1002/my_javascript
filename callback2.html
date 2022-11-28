@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callBack2</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function ameen(subject, callback2){
+            alert("I've started" + subject + "homework and its almost done <br>");
+            callback2();
+        }
+
+        function nihal(){
+            setTimeout(()=>{
+                document.write("I m calling nihal <br>");
+                setTimeout(()=>{
+                    document.write("nihal has picked the call <br>");
+                    setTimeout(()=>{
+                        document.write("nihal has done the homework <br>")
+                    },2000);
+                },2000);
+            },2000);
+        }
+        ameen('maths', nihal);
+
+    </script>
+</body>
+</html>

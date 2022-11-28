@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let icecream = {
+            flavours: ['🍓strawberry', '🥭mango', '🍏green apple', "🍍pineapple", "🥝kiwi", '🍫chocolate'],
+            liquid: ['🥛milk', '🍦cream', '🍀mint'],
+            holder: ['🍦waffle-cone', '🧁cup', '🍢stick'],
+            topping: ['🍭sprinkles', '🍫chocolate', '🍪oreo', '🧇caramel']
+        }
+
+        let order = (call_production)=>{
+
+            setTimeout(()=>{
+                console.log(`you have selected a ${icecream.flavours[1]} ice creame`);
+            },2000);
+            call_production();
+        }
+
+
+        //this is callback 
+        let production = ()=>{
+            setTimeout( ()=>{
+                console.log(`${icecream.flavours[1]} was chopped`);
+
+                setTimeout(()=>{
+                    console.log(`${icecream.liquid[0]} and ${icecream.liquid[1]} has been added to it`);
+
+                    setTimeout(()=>{
+                        console.log('machine was started');
+
+                        setTimeout(()=>{
+                            console.log('sprinkles was added');
+
+                            setTimeout(()=>{
+                                console.log(`ur ${icecream.holder[0]} is ready to take icecream`);
+
+                                setTimeout(()=>{
+                                    console.log(`enjoy ur favorite icecream with spinkles and wafflecone`);
+                                })
+                            }, 2000);
+                        }, 2000);
+                    }, 3000);
+                }, 3000);
+            }, 2000);
+        }
+        order(production);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="anch1" href="https://www.google.com" target="_blank">GOOGLE</a>
+    <input id="btn1" type="button" name="change link" value=" change link">
+
+
+
+
+    <script>
+
+
+        let btn = document.getElementById('btn1');
+        let alink = document.getElementById('anch1');
+        
+        btn.addEventListener('click',()=>{
+            
+            if(alink.textContent == "MICROSOFT"){
+                alink.textContent = "GOOGLE";
+                alink.href = "https://www.google.com";
+            }
+            else{
+                alink.textContent = "MICROSOFT";
+                alink.href = "https://www.microsoft.com/en-in/";
+            }
+        })
+        
+    </script>
+</body>
+</html>

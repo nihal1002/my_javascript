@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function 2</title>
+</head>
+<style>
+    div{
+        background-color: yellow;
+        border: 3px dotted red;
+    }
+</style>
+<body>
+    
+    <!-- <p>Thanks for visiting</p>
+    <p id="input"></p> -->
+    <div id="div1">
+        <p>adding and removing event listner </p>
+    </div>
+    <button id="remove" type=" button">
+        remove listner
+    </button>
+
+    <script>  
+
+    
+        function square2(num, pow){
+            num = num**pow;
+            return num;
+        }
+        let result = square2(2,3);
+        document.write(result);
+
+
+        function hello(fname,lname){
+            let input = document.getElementById('input');
+            input.innerText = 'Mr. ' + fname + " " + lname;
+        }
+
+        let print = hello('nihal','sardar');
+
+
+         let div = document.getElementById('div1');
+
+        div.addEventListener('click', function border(){
+            if(div.style.border == '3px dotted red'){
+                div.style.border = '5px double green';
+                div.textContext = "Event listner is Added successfully";
+            }
+            else{
+                div.style.border = '3px dotted red';
+                div.textContext = "Event listner is added sucessfully";
+            }
+        });
+
+        
+    </script>
+</body>
+</html>

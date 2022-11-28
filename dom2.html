@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom 2</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            max-width: 80vw;
+            margin: 2rem auto;
+            padding: 2rem;
+            border: 2px solid greenyellow;
+        }
+        div{
+            width: 10rem;
+            height: 10rem;
+            border: 2px solid darkred;
+        }
+        #red{
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <section>
+
+    </section>
+
+    <script>
+        
+        const section = document.querySelector('section');
+        const addelement1 = document.createElement('div');
+        const addelement2 = document.createElement('h1');
+        const addelement3 = document.createElement('h2');
+        const addelement4 = document.createElement('div');
+        addelement1.setAttribute('id', 'red');
+        // addelement1.innerHTML = "<h1>Hello Everyone</h1>";
+        // section.appendChild(addelement1);
+
+
+        section.insertAdjacentElement('beforebegin', addelement1).innerText="above section";
+
+        section.insertAdjacentElement('afterbegin', addelement2).innerText="inside section";
+        
+        section.insertAdjacentElement('beforeend', addelement3).innerText="inside section";
+
+        section.insertAdjacentElement('afterend', addelement4).innerText="below section";
+
+    </script>
+</body>
+</html>

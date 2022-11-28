@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 100vw;
+            height: 33vh;
+            border: 5px solid rgb(147, 1, 1);
+            position: relative;
+        }
+        img{
+            height: 90%;
+            width: 20%;
+            position: absolute;
+            transition: all 5s ease;
+            
+        }
+        #img2{
+            transition: all 5s ease;
+        }
+        h1{
+            text-align: center;
+        }
+        #div4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div><img id="img1" src="D:/Nihu/images/spiderman2.jpg"></div>
+    <div><img id="img2" src="D:/Nihu/images/spiderman2.jpg"></div>
+
+    <div id="form">
+        <h1 id="head">The Nihal Sardar</h1>
+        <div id="div4">
+            <label for="bgclr">background:
+                <input type="text" value="" id="ip1" placeholder="enter color" onkeypress="document.getElementById('form').style.backgroundColor = (this.value)">
+            </label>
+            <label>opacity:
+                <input type="text" value="" id="ip2" onkeyup="document.getElementById('form').style.opacity = (this.value)">
+            </label>
+            <label for="font Size">Font Size:
+                <input type="text" value="" id="ip3" onkeydown="document.getElementById('head').style.fontSize = (this.value)">
+            </label>
+            <label for="Moving">Moving img:
+                <input type="text" value="" id="ip4" onkeyup="document.getElementById('img2').style.left = (this.value)" >
+            </label>
+        </div>
+    </div>
+    
+</body>
+</html>

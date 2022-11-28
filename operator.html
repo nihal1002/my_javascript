@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        document.write("<h1>JavaScript</h1><h2>Arthmatic</h2>");
+
+        let a,b;
+        a = 10;
+        b = 20;
+
+        document.write("a+b =",a + b,'<br>');
+        document.write("a-b =",a - b,'<br>');
+        document.write("a/b =",a / b,'<br>');
+        document.write("a%b =",a % b,'<br>');
+
+
+        document.write("a =", a, "<br>");
+        document.write("b =", b, "<br>");
+
+        document.write('a = b = ', a = b,"<br>");
+        document.write('new a =', a,"<br>");
+
+        document.write("a+2 = ", a+=2, '<br>'); //a = a+2;
+        document.write("a-2 = ",a-=2, '<br>'); //a = a-2;
+        document.write("a/2 = ",a/=2, '<br>'); //a = a/2;
+        document.write("a%2 = ",a%=2, '<br>'); //a = a%2;
+
+
+        document.write("<h1>comparison operator</h2>");
+        document.write("a = ", a, "<br>");
+        document.write("b = ", b);
+
+
+        document.write("<h3> a == b </h3>", a == b, "<br>");
+        document.write("<h3> a > b </h3>", a > b, "<br>");
+        document.write("<h3> a < b </h3>", a < b, "<br>");
+        document.write("<h3> a >= b </h3>", a >= b, "<br>");
+        document.write("<h3> a <= b </h3>", a <= b, "<br>");
+
+
+        let str1 = 'Nihu';
+        let str2 = 'nihu';
+        
+        document.write('<h3> ${str1} </h3>');
+        document.write('<h3> ${str2} </h3>');  
+        document.write("str1 == str2 ", str1 == str2, "<br>");
+        document.write("str1 != str2 ", str1 != str2, '<br>');
+
+        str1 = '1';
+        str2 = 1;
+
+        document.write('<h3> string ${str1} </h3>');
+        document.write('<h3> number ${str2} </h3>');
+
+        
+        document.write("str1 != str2 ", str1 != str2, '<br>');
+        document.write("str1 !== str2 ", str1 !== str2, '<br>');
+        document.write("str1 === str2 ", str1 === str2, '<br>');
+        document.write("!true", !true, "<br>");
+        document.write("!false", !false, "<br>");
+
+
+        // // //Logical Operators in AND operator both cond must be true in order to display true.
+        // // //whereas in OR operator any one of the condition must true in order to display true.
+        document.write("<h2>Logical And Operators</h2>")
+        document.write(true && true,"<br>");
+        document.write(true && false,"<br>");
+        document.write(false && true,"<br>"); 
+        document.write(false && false,"<br>");
+        document.write(a==b && a>b,"<br>",a,b,"<br>");
+        document.write(b>a && a<b,"<br>");
+
+        document.write("<h2>Logical OR Operators</h2>")
+        document.write(true || false,"<br>");
+        document.write(true || true,"<br>");
+        document.write(false || true,"<br>");
+        document.write(false || false,"<br>");
+        
+        // document.write("<h2>Logical NOT Operators</h2>")
+        // document.write(!true,"<br>");
+        // document.write(!false);
+
+        // //ternary operator
+        document.write("<h2>Ternary Operator</h2>")
+        c = 2;
+        d = 5; 
+         
+        c = 'Naresh';
+        d = 'Kushwaha';
+        c ='ans';
+        d = 'Ans';
+        let check = c !== d ? "yes" : 'no';
+        document.write(check,"<br>"); 
+
+    let quest = 'HTML is a Programming language 😎?';
+    let answer = 'Yes';
+    let result = (answer.toLowerCase() == 'no')? 'correct' : 'fail';
+      document.write(result,"<br>"); 
+
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

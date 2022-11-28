@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //synchronous
+        function first(){
+            console.log(1);
+        }
+
+        function second(){
+            console.log(2);
+        }
+
+        setTimeout(()=>{
+            document.write('boom <br>');
+        }, 3000);
+
+        //Asynchronous
+        function third(){
+            //anonymous function
+            setTimeout(function(){
+                console.log(3);
+            },3000);
+
+            //arrow function
+            setTimeout(()=>{
+                console.log(3);
+            },6000);
+        }
+        function fourth(){
+            console.log(4);
+        }
+
+        first();
+        second();
+        third();
+        fourth();
+    </script>
+</body>
+</html>

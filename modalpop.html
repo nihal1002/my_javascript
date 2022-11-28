@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    section{
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(243, 201, 218);
+        gap: 1rem;
+    }
+    #div1{
+        width: 25%;
+        height: 25%;
+        padding: 0.3rem;
+        border: 5px solid dodgerblue;
+        background-color: lightblue;
+        text-align: justify;
+        position: relative;
+        display: none;
+    }
+    h1{
+        color: darkblue;
+        text-align: center;
+    }
+    p{
+        margin: 0.5rem;
+    }
+    button{
+        width: 5rem;
+        height: 2rem;
+        border: 2px solid red;
+        background-color: rgb(191, 243, 88);
+        border-radius: 5px
+    }
+    
+    #btn2{
+        float: right;
+    }
+    #btn3{
+        width: 90%;
+        position: absolute;
+        top: 80%;
+        left: 5%;
+    }
+</style>
+<body>
+    <section id="sect1">
+        <h1>modal popup using HTML, CSS and javascript</h1>
+        <button id="btn1">html</button>
+        <div id="div1">
+            <h1>Heading <button id="btn2"><i class="fa-solid fa-xmark"></i></button></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias blanditiis doloremque necessitatibus laudantium totam cumque quo corrupti iure fugiat ea doloribus repudiandae ipsa rem, ab sit aperiam debitis ullam dolores!</p>
+            <button id="btn3">close</button>
+        </div>
+
+
+        <script>
+                        
+
+            let div1 = document.getElementById('div1');
+            let btn1 = document.getElementById('btn1');
+            let btn2 = document.getElementById('btn2');
+            let btn3 = document.getElementById('btn3');
+
+            btn1.addEventListener('click', function fn1(){
+                div1.style.position = 'absolute';
+                div1.style.display = 'block';
+            });
+
+            btn2.addEventListener('click', function fn2(){
+                div1.style.display = 'none';
+            });
+
+            btn3.addEventListener('click', function fn3(){
+                div1.style.display = 'none';
+            });
+
+        </script>
+    </section>
+</html>

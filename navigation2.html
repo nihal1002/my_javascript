@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Navigation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(175, 139, 210);
+        }
+
+        header{
+            background-color: yellowgreen;
+            width: 95% ;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom:0.3rem;
+        }
+      
+        #nav1{
+            width: 50rem;            
+        }
+        img{
+            width: 3rem;
+            height: auto;
+        }
+        .color{
+            color: blue;
+        }
+        
+        nav#nav1 ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px double red; */
+
+
+        }
+
+        #toggle-nav{
+            display: none;
+        }
+
+        #navbar1{ 
+            /* border: 1px double red; */
+            display: none;
+        }
+
+        #nav-link1{
+            display: none;
+        }
+
+        /* mobile-nav */
+        @media(max-width:600px){
+            header{
+                height: 8rem;
+                justify-content: center;
+                align-items: center;
+            }
+            .div-logo{
+                transform: scale(2);
+            }
+            .logo{
+                width: 3rem;
+            }
+            #nav1{
+                display: none;
+            }
+            #navbar1{
+                display: flex;
+                /* width:50%; */
+                /* border:5px solid green; */
+            }
+            #nav-link1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #000000;
+                overflow: hidden;
+                max-height: 0;
+                transition: all 0.4s ease-in-out;
+                /* border:1px solid red; */
+                width:40rem;
+            }
+            #nav-link1.open{
+                max-height: 260px;
+            }
+
+            #nav-link1 li{
+                list-style-type: none;
+                padding: 0.5rem;
+            }
+            #nav-link1 li a{
+                text-decoration: none;
+            }
+
+            #toggle-nav{
+                display: block;
+                position: fixed;
+                top: 30px;
+                right: 20px;
+                font-size: 42px;
+                background-color: white;
+                padding: 2px 16px;
+                border-radius: 50%;
+                transition: all 0.4s;
+                cursor: pointer;
+            }
+
+            #toggle-nav.open{
+                transform: rotate(225deg);
+                color: red;
+
+            }
+
+        }
+
+        
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="div-logo">
+        <a href="#">
+             <img src="beardman.png" class="logo" alt="logo" title="logo"></a>
+        </div>
+             <nav id="nav1">
+                <ul id="ul1">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+             </nav>
+    </header>
+
+    <div id="toggle-nav">+</div>
+    <nav id="navbar1">
+        <ul id="nav-link1">
+            <li><a href="#" class="alink">Home</a></li>
+            <li><a href="#" class="alink">About me</a></li>
+            <li><a href="#" class="alink">Projects</a></li>
+            <li><a href="#" class="alink">Contact us</a></li>
+        </ul>
+    </nav>
+    <script>
+        //const nav = document.getElementById('navbar');
+        const nav1 = document.getElementById('nav-link1');
+        // console.log(nav);
+        // console.log(nav1);
+
+        const togglenav = document.getElementById('toggle-nav');
+        //console.log(togglenav);
+
+        togglenav.addEventListener('click',function(){
+            nav1.classList.toggle("open");
+            togglenav.classList.toggle("open");
+        })
+    </script>
+    
+    
+</body>
+</html>

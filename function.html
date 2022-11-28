@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        div{
+            width: 86vw;
+            height: 20vh;
+            border: 15px double darkred;
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+        }
+        #result{
+            width: 20vw;
+            height: 10vh;
+            border: 15px double darkred;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <h1>lets find the square and cube of entered number</h1>
+            <label for="input">Enter number:
+                <input type="text" id="number">
+            </label>
+            <input type="button" value="cube" onclick="getcube()">
+            <input type="button" value="sqr" onclick="getsquare()">
+        </div>
+        <br>
+        <label>
+            result:
+            <div id="result">
+            </div>
+        </label>
+    </section>
+
+    <script>
+        function getcube()
+        {
+            let num = document.getElementById("number").value;
+
+            // num = num * num * num;
+
+            num = num**3;
+            let result = document.getElementById('result');
+            result.innerHTML=`<h1> ${num} </h1>`;
+        }
+        function getsquare()
+        {
+            let num = document.getElementById("number").value;
+
+            // num = num * num * num;
+
+            num = num**2;
+            let result = document.getElementById('result');
+            result.innerHTML=`<h1> ${num} </h1>`;
+        }
+
+    </script>
+</body>
+</html>

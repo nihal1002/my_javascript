@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom1</title>
+    <style>
+        *{ 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 98vw;
+            height: auto;
+        }
+        .parent{
+            margin: 1rem;
+            padding: 0.5rem;
+            background-color: lightblue;
+            color: darkblue;
+            border: 2px solid darkred;
+        }
+        .child{
+            width: 100%;
+            background-color: aqua;
+            color: darkred;
+            border: 2px solid darkblue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent">
+        <p class="child"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In laboriosam labore quae quibusdam! Dicta cumque ab aliquid repellat perferendis consectetur suscipit dolor necessitatibus nemo distinctio officia ad incidunt dolore qui omnis sit perspiciatis, quaerat repellendus voluptas vel exercitationem? Reprehenderit incidunt ducimus dolore asperiores atque nesciunt maiores tenetur vero commodi enim!
+        </p> 
+        <div class="child">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur mollitia consectetur, necessitatibus natus vero iusto dolor veniam in adipisci repellendus libero sunt laudantium fugiat quis repudiandae alias dolorum asperiores quae autem magni commodi! Fugit, in quae soluta voluptates iste laudantium saepe deserunt doloremque quis suscipit consequuntur consequatur assumenda voluptatem eligendi.
+        </div>
+    </div>
+
+
+
+    <script>
+        // const child = document.querySelector('.child');
+        // console.log(child);
+        // console.log(child.parentNode);
+
+        // const parent = document.querySelector('.parent');
+        // const child =  parent.childNodes[3];
+        // console.log(child);
+
+        // const parent = document.querySelector('.parent');
+        // const child =  parent.childNodes[3].innerHTML="<p>hi hello</p>";
+        // console.log(child);
+        // document.write(child);
+
+
+        let div = document.querySelector('div.child');
+
+        // div.innerHTML="<h1>I am Inside</h1>";
+        // div.innerText="<h1>I am Inside</h1>";
+        // console.log(div);
+        
+        div.style.fontFamily="cursive";
+        div.style.margin="0.2rem";
+        div.style.padding="1rem";
+        div.style.borderRadius="1.5rem 3rem";
+
+    </script>
+</body>
+</html>

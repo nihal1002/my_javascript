@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>get and set cookies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+
+        section#main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: yellow;
+            padding: 0.5rem;
+        }
+
+        fieldset {
+            text-align: center;
+            padding: 0.5rem;
+            display: flex;
+            gap: 1rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: darkorange;
+            border-radius: 1rem;
+        }
+
+        button {
+            padding: 0.3rem 0.8rem;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+            border-width: 0.1rem;
+            font-weight: bold;
+            font-family: cursive;
+        }
+
+        #getcontainer {
+            border: 1px double green;
+            padding: 1rem;
+            width: 30rem;
+            margin: 1rem auto;
+            border-radius: 0.3rem;
+            text-align: center;
+        }
+
+        /* h3{
+            text-align: center;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <section id="main">
+        <form action="#" method="POST" name="myform" id="form">
+            <fieldset>
+                <legend>Cookies</legend>
+
+                <label for="users">
+                    Name: <input type="text" name="username" id="users">
+                </label>
+                <label for="age">
+                    Age: <input type="number" name="age" id="age">
+                </label>
+                <div>
+                    <button type="button" id="set">Set</button>
+                    <button type="button" id="get">Get</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+    <section id="getcontainer">
+        <h3>Available Cookies:</h3>
+    </section>
+
+    <script>
+        const setcookie = document.getElementById('set');
+        const getcookie = document.getElementById('get');
+        const container = document.querySelector('#getcontainer');
+
+        setcookie.addEventListener('click', () => {
+            document.cookie = 'name=' + document.myform.username.value;
+            // document.cookie='age=' + document.myform.age.value + ';max-age='+60*60*1;   
+            // document.cookie = 'age=' + document.myform.age.value + ';max-age=' + 60 * 5;
+            document.cookie = 'age=' + document.myform.age.value + ';max-age=' + 60;
+        })
+        getcookie.addEventListener('click', () => {
+            container.innerHTML += "<h4>" + document.cookie + "</h4>";
+        });        
+    </script>
+</body>
+
+</html>

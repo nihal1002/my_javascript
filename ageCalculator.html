@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: larger;
+            font-family:'Times New Roman';
+            color: rgb(30, 30, 106);
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+            
+        }
+        div{
+            width: 30vw;
+            height: 30vh;
+            background-color: #0093E9;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            border: 5px solid rgb(194, 76, 76);
+            border-radius: 35px 5px 35px 5px;
+            box-shadow: 12px 2px 5px rgb(125, 50, 50), 12px 2px 5px darkred;
+        }
+        input{
+            border: 1px solid palevioletred;
+            border-radius: 2px;
+
+        }
+    </style>
+</head>
+<body>
+    
+    <section>
+        <div id="div1">
+            <h1>Check Your Age</h1>
+            <label for="date"> Enter Your Age:
+                <input type="date" name="date" id="dob">
+            </label>
+            <label for="text" name="text">Your Age Is:
+                <input type="text" name="age" readonly id="age">
+            </label>
+        </div>
+    </section>
+
+
+    <script>
+
+        let curdate = new Date();
+        console.log(curdate);
+
+        let date1 = curdate.getDate();
+        console.log(date1);
+
+        let month1 = curdate.getMonth();
+        console.log(month1);
+
+        let year1 = curdate.getFullYear();
+        console.log(year1);
+
+        let dob = document.getElementById('dob');
+        let age = document.getElementById('age');
+
+            dob.addEventListener('input', ()=>{
+                let result = dob.value;
+                console.log(result);
+                console.log(typeof(result));
+
+
+                let dobarr = result.split('-');
+                console.log(dobarr);
+                
+                let dobyear = Number(dobarr[0]);
+                console.log(dobarr);
+                console.log(typeof(dobyear));
+                console.log(dobyear);
+                console.log(typeof(year1));
+
+
+                let ageresult = year1 - dobyear;
+                age.value = ageresult;
+
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        section{
+            width: 100vw;
+            height: 100vh;
+            margin: 3rem auto;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form>
+        <label for="fname">Firstname:
+            <input type="text" id="fname">
+        </label>
+        <hr>
+        <label for="" >Lastname:
+            <input type="text" id="lname">
+        </label>
+        <hr>
+        <label for="">City:
+            <select name="City" id="select">
+                <option value="thane" name="thane" >thane</option>
+                <option value="mumbai" name="mumbai" >mumbai</option>
+                <option value="pune" name="pune" >pune</option>
+            </select>
+        </label>
+        <hr>
+        <label for="">Address:
+            <textarea id="add" cols="20" rows="5" placeholder="enter your address" required></textarea>
+        </label>
+        <hr>
+        <label for="">Confirm-address:
+            <textarea id="add2" cols="20" rows="5" placeholder="enter your address" required></textarea>
+        </label>
+        <hr>
+
+        <label for="Gender"> Gender:
+            Male:
+            <input id="rad1" type="radio" name="gender" value="Male" checked>
+            Female:
+            <input id="rad2" type="radio" name="gender" value="Female">
+            others:
+            <input id="rad3" type="radio" name="gender" value="others">
+        </label>
+
+        <hr>
+        <div>
+            <input type="submit" value="submit">
+        </div>
+        <div id="input tracker">
+
+        </div>
+    </form>
+    </section>
+
+    <script>
+        let fname = document.getElementById('fname');
+        let lname = document.getElementById('lname');
+        let input3 = document.getElementById('select');
+        let add = document.getElementById('add');
+        let addr2 = document.getElementById('add2');
+        let trackerdiv = document.getElementById('input tracker');
+
+        // input3.addEventListener('focus',()=>{
+        //     input3.style.backgroundColor = "red";
+        // })
+
+        add.addEventListener('input', ()=>{
+            let a = add.value;
+            add2.innerHTML = a;
+        });
+
+        fname.addEventListener('select',()=>{
+            fname.style.backgroundColor='purple';
+            fname.style.color='yellow';
+        })
+
+        fname.addEventListener('change', ()=>{
+            let a = fname.value;
+            trackerdiv.innerHTML += a + '<br>';
+        });
+
+        lname.addEventListener('change', ()=>{
+            let a = lname.value;
+            trackerdiv.innerHTML += a + '<br>';
+        });
+
+        input3.addEventListener('change', ()=>{
+            let a = input3.value;
+            trackerdiv.innerHTML += a + '<br>';
+        });
+
+        add.addEventListener('change', ()=>{
+            let a = add.value;
+            trackerdiv.innerHTML += a + '<br>';
+        });
+
+
+        let form1 = document.querySelector('form');
+
+        form1.addEventListener('submit', ()=>{
+            alert('form is successfully submitted')
+        });
+
+        radio.addEventListener('change', ()=>{
+            let a = radio.value;
+            trackerdiv.innerHTML += a + '<br>';
+        });
+
+
+    </script>
+</body>
+</html>

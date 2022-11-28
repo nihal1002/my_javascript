@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+
+
+    <h1>JavaScript Dom</h1>
+    <div id="main-div">
+        <h1 class="div-head"> my heading 1 </h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto consequatur voluptas ut enim recusandae est ratione pariatur cupiditate vel! Porro, quidem odit assumenda architecto, maxime reprehenderit ipsa, saepe quibusdam mollitia adipisci ullam consequatur eveniet iusto ad suscipit ea magnam iure! Temporibus labore debitis nulla porro optio nihil expedita atque a.</p>
+        <h1 class="div-head"> my heading 2</h1>
+        <h2 class="div-head"> my sub-heading </h2>
+    </div>
+
+
+    <script>
+
+        // let a1 = document.getElementById('main-div');
+        // console.log(a1);
+        // let a2 = document.getElementsByClassName('div-head')[0];
+        // console.log(a2);
+
+
+        // let a = document.querySelector('#main-div');
+        //     console.log(a);
+        // a = document.querySelector('.div-head');
+        //     console.log(a);
+        // a = document.querySelector('p');
+        //     console.log(a);
+
+        // a = document.querySelectorAll('#main-div');
+        //     console.log(a);
+        // a = document.querySelectorAll('.div-head')[2];
+        //     console.log(a);
+        // a = document.querySelectorAll('p');
+        //     console.log(a);
+
+
+        a = document.querySelector('div> .div-head:nth-of-type(2)');
+            console.log(a);
+        a = document.querySelector('#main-div> .div-head:nth-last-of-type(2)');
+            console.log(a);
+
+    </script>
+</body>
+</html>

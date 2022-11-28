@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background-image: linear-gradient(pink, rgb(75, 204, 255));
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center ;
+        
+    }
+    div{
+        height: 15rem;
+        width: 20rem;
+        /* border: 2px solid black; */
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(pink, rgb(103, 212, 255));
+        box-shadow: 5px 5px 9px 4px rgb(100, 100, 100);
+
+    }
+    input{
+        height: 2.5rem;
+        margin: 1rem;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    button{
+        padding: 5px;
+        border: 5px double white;
+        border-radius: 8px;
+        background-color: black;
+        color: white;
+    }
+    h1#answer{
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1>Check your text:</h1>
+        <input type="text" id="input" placeholder="palindrome place holder">
+        <button  id="btn">Check</button>
+        <h1 id="answer"></h1>
+    </div>
+    <script>
+        let input = document.getElementById('input');
+        let btn = document.getElementById('btn');
+        let ans = document.getElementById('answer');
+
+        btn.addEventListener('click', ()=>{
+            let input1 = input.value.toLowerCase();
+            let input2 = input1.split('').reverse().join('');
+            // console.log(input1,input2);
+            let print1 = 'the word ' + input1 + ' is a palindrome';
+            let print2 = 'the word ' + input1 + ' is not a palindrome';
+            let result = (input1 === input2) ? print1 : print2;
+            ans.textContent = result;
+        })
+        
+    </script>
+</body>
+</html>

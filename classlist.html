@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+          margin:0;
+          padding:0;
+          box-sizing:border-box
+        }
+        body{
+            min-height:100vh;
+            display:flex;
+            flex-direction: column;
+            gap:0.5rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .div1{
+            width:40rem;
+            min-height:100px;
+            background-color: yellow;
+            padding: 1rem;
+            transition:all 1s ease-in-out;
+        }
+        button{
+            padding: 0.5rem;
+        }
+    
+        .new{
+            background-color: purple;
+            color:white;
+            font-family:cursive;
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body>
+      <div class='div1'>
+        <h1>heading</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, quis nihil recusandae eius velit repudiandae, minima harum sunt expedita exercitationem est, adipisci impedit sequi magnam commodi aliquid quae quos reprehenderit?</p>
+    </div>
+    <div id="div2">
+        <button id="btnadd">add class</button>
+        <button id="btnremove">remove class</button>
+        <button id="btntoggle">toggle class</button>
+    </div>
+    
+
+ <script>
+    // dom addEventListener method
+        let div =document.querySelector('div');
+
+        let add = document.getElementById('btnadd');
+        let remove = document.getElementById('btnremove');
+        let toggle = document.getElementById('btntoggle');
+
+        add.addEventListener('click',function(){
+            div.classList.add('new');
+        });
+        remove.addEventListener('click',function(){
+            div.classList.remove('new');
+        });
+        toggle.addEventListener('click',function(){
+            div.classList.toggle('new');
+        });
+ </script>
+</body>
+</html>

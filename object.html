@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        let object1 = {
+            firstname: 'Sayali', lastName: 'Sardar',
+            city: ['Mumbai', 'Pune', 'Bangalore'],
+            surname : function(){
+                return this.firstname + ' ' + this.lastName;
+            }
+        };
+        document.write(object1.city, "<br>");
+        document.write(object1.city[2], "<br>");
+        document.write(object1.surname(), '<br>');
+            //replace value
+        object1.lastName = 'Naik';
+        document.write(object1.lastName, '<br>');
+
+            //add new object
+        object1.email = 'nihal.sardar@gmail.com';
+
+        document.write(object1.email, '<br>');
+
+        delete object1.surname();
+
+        // new key
+        object1.sentence = function(){
+            return this.firstname + " " + this.lastName;
+        }
+        document.write(object1.sentence(), "<br>");
+
+        // let object1 = {
+        //     firstname: 'Nihal',
+        //     lastName: 'Sardar',
+        // };
+        // document.write(object1.firstname, "<br>");
+        // document.write(object1['firstname'], "<br>");
+        
+        
+    </script>
+</body>
+</html>
